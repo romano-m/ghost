@@ -26,9 +26,13 @@ config = {
         // ```
 
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
+                host: 'ec2-54-197-250-52.compute-1.amazonaws.com',
+                user: 'vrygrisnjlvqhv',
+                password: 'ulvWRrcHU22t_XhrgPl3Xxma_3',
+                database: 'd4k276ejik67vv',
+                port: '5432'
             },
             debug: false
         },
@@ -47,9 +51,13 @@ config = {
         url: 'http://my-ghost-blog.com',
         mail: {},
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                host: 'ec2-54-197-250-52.compute-1.amazonaws.com',
+                user: 'vrygrisnjlvqhv',
+                password: 'ulvWRrcHU22t_XhrgPl3Xxma_3',
+                database: 'd4k276ejik67vv',
+                port: '5432'
             },
             debug: false
         },
@@ -69,11 +77,14 @@ config = {
     testing: {
         url: 'http://127.0.0.1:2369',
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost-test.db')
-            }
-        },
+                host: 'ec2-54-197-250-52.compute-1.amazonaws.com',
+                user: 'vrygrisnjlvqhv',
+                password: 'ulvWRrcHU22t_XhrgPl3Xxma_3',
+                database: 'd4k276ejik67vv',
+                port: '5432'
+            },
         server: {
             host: '0.0.0.0',
             port: process.env.PORT
@@ -85,11 +96,14 @@ config = {
     travis: {
         url: 'http://127.0.0.1:2368',
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost-travis.db')
-            }
-        },
+                host: 'ec2-54-197-250-52.compute-1.amazonaws.com',
+                user: 'vrygrisnjlvqhv',
+                password: 'ulvWRrcHU22t_XhrgPl3Xxma_3',
+                database: 'd4k276ejik67vv',
+                port: '5432'
+            },
         server: {
             host: '0.0.0.0',
             port: process.env.PORT
