@@ -26,13 +26,9 @@ config = {
         // ```
 
         database: {
-            client: 'postgres',
+            client: 'sqlite3',
             connection: {
-                host: 'ec2-54-197-250-52.compute-1.amazonaws.com',
-                user: 'vrygrisnjlvqhv',
-                password: 'ulvWRrcHU22t_XhrgPl3Xxma_3',
-                database: 'd4k276ejik67vv',
-                port: '5432'
+                filename: path.join(__dirname, '/content/data/ghost-dev.db')
             },
             debug: false
         },
@@ -77,17 +73,14 @@ config = {
     testing: {
         url: 'http://127.0.0.1:2369',
         database: {
-            client: 'postgres',
+            client: 'sqlite3',
             connection: {
-                host: 'ec2-54-197-250-52.compute-1.amazonaws.com',
-                user: 'vrygrisnjlvqhv',
-                password: 'ulvWRrcHU22t_XhrgPl3Xxma_3',
-                database: 'd4k276ejik67vv',
-                port: '5432'
-            },
+                filename: path.join(__dirname, '/content/data/ghost-test.db')
+            }
+        },
         server: {
-            host: '0.0.0.0',
-            port: process.env.PORT
+            host: '127.0.0.1',
+            port: '2369'
         }
     },
 
@@ -96,17 +89,14 @@ config = {
     travis: {
         url: 'http://127.0.0.1:2368',
         database: {
-            client: 'postgres',
+            client: 'sqlite3',
             connection: {
-                host: 'ec2-54-197-250-52.compute-1.amazonaws.com',
-                user: 'vrygrisnjlvqhv',
-                password: 'ulvWRrcHU22t_XhrgPl3Xxma_3',
-                database: 'd4k276ejik67vv',
-                port: '5432'
-            },
+                filename: path.join(__dirname, '/content/data/ghost-travis.db')
+            }
+        },
         server: {
-            host: '0.0.0.0',
-            port: process.env.PORT
+            host: '127.0.0.1',
+            port: '2368'
         }
     }
 };
